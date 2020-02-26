@@ -608,7 +608,7 @@ API已经支待一个pulishNotReadyAddresses的新服务规范字段，它将替
 - 首先，从集群内部连接到服务的CLUSTER-IP，而不是从外部。
 - 不要通过ping服务来判断服务是否可访问（请记住，服务的集群IP是虚拟IP，是无法ping通的）
 - 如果已经定义了就绪指针，请确保它返回成功；否则该pod不会成为服务的一部分。
-- 如果尝试通过FQDN或其中 一部分来访问服务（例如myservice.mynamespace.svc.cluster.local或myservice.mynamespace）,但并不起作用，请查看是否可以使用集群IP而不是FQDM来访问服务。
+- 如果尝试通过FQDN或其中 一部分来访问服务（例如myservice.mynamespace.svc.cluster.local或myservice.mynamespace）,但并不起作用，请查看是否可以使用集群IP而不是FQDN来访问服务。
 - 检查是否连接到服务公开的端口，而不是目标端口。
 - 尝试直接连接到pod IP以确认pod正在接受正确端口上的连接（即pod提供的服务功能正常）。
 - 如果甚至无法通过pod的IP 访问应用， 请确保应用不是仅绑定到本地主机。
